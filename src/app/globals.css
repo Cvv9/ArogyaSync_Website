@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0A2463;
+  --color-teal: #00D9FF;
+  --color-clinical-white: #FFFFFF;
+  --color-soft-gray: #F5F7FA;
+  --color-success: #00C48C;
+  --color-alert: #FFB020;
+  --color-charcoal: #1A1D29;
+  --color-silver: #C0C5CE;
+
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Roboto Mono, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+:root {
+  --background: var(--color-clinical-white);
+  --foreground: var(--color-charcoal);
+  --primary: var(--color-navy);
+  --accent: var(--color-teal);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #050b1a;
+    /* Even deeper navy for background */
+    --foreground: var(--color-soft-gray);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-sans);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  /* 3D Transform Utilities */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}

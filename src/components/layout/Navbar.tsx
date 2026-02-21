@@ -44,11 +44,11 @@ export function Navbar() {
             <div className="container mx-auto px-6 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2 group">
-                    <div className="w-10 h-10 bg-navy rounded-xl flex items-center justify-center transition-transform group-hover:scale-110">
-                        <Activity className="text-teal w-6 h-6" />
+                    <div className="w-10 h-10 bg-navy-dark rounded-xl flex items-center justify-center transition-transform group-hover:scale-110">
+                        <Activity className="text-emerald w-6 h-6" />
                     </div>
-                    <span className="text-2xl font-display font-bold text-navy tracking-tight">
-                        Arogya<span className="text-teal">Sync</span>
+                    <span className="text-2xl font-display font-bold text-navy-dark tracking-tight">
+                        Arogya<span className="text-emerald">Sync</span>
                     </span>
                 </Link>
 
@@ -58,17 +58,17 @@ export function Navbar() {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-medium text-charcoal/80 hover:text-navy transition-colors relative group"
+                            className="text-sm font-medium text-navy-dark/80 hover:text-navy-dark transition-colors relative group"
                         >
                             {link.name}
-                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal transition-all group-hover:width-[100%]" />
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald transition-all group-hover:w-full" />
                         </Link>
                     ))}
                 </nav>
 
                 {/* Action Buttons */}
                 <div className="hidden md:flex items-center gap-4">
-                    <Button variant="ghost" className="text-charcoal font-medium">
+                    <Button variant="ghost" className="text-navy-dark font-medium">
                         Log In
                     </Button>
                     <Button variant="gradient" className="font-semibold group">
@@ -88,7 +88,7 @@ export function Navbar() {
 
             {/* Scroll Progress Bar */}
             <motion.div
-                className="absolute bottom-0 left-0 right-0 h-[2px] bg-teal origin-left"
+                className="absolute bottom-0 left-0 right-0 h-[2px] bg-emerald origin-left"
                 style={{ scaleX }}
             />
 
@@ -104,7 +104,7 @@ export function Navbar() {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="text-lg font-medium text-charcoal"
+                                className="text-lg font-medium text-navy-dark"
                                 onClick={() => setIsOpen(false)}
                             >
                                 {link.name}

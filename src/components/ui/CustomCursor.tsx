@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { motion, useSpring } from "framer-motion";
 
 export function CustomCursor() {
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-    const [isHovering, setIsHovering] = useState(false);
+    const [isHovering, setIsHovering] = React.useState(false);
 
     const cursorX = useSpring(0, { stiffness: 500, damping: 28 });
     const cursorY = useSpring(0, { stiffness: 500, damping: 28 });
@@ -35,7 +34,7 @@ export function CustomCursor() {
 
     return (
         <motion.div
-            className="fixed top-0 left-0 w-8 h-8 rounded-full border border-teal pointer-events-none z-[9999] hidden lg:block"
+            className="fixed top-0 left-0 w-8 h-8 rounded-full border border-emerald pointer-events-none z-[9999] hidden lg:block"
             style={{
                 x: cursorX,
                 y: cursorY,
@@ -44,7 +43,7 @@ export function CustomCursor() {
             }}
             transition={{ type: "spring", stiffness: 250, damping: 20 }}
         >
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-1 bg-teal rounded-full" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-1 bg-emerald rounded-full" />
         </motion.div>
     );
 }

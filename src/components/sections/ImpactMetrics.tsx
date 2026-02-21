@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { cn } from "@/lib/utils";
 
 const metrics = [
     { label: "5-Year Savings", value: 28.5, prefix: "₹", suffix: "L", sub: "per 10 beds" },
@@ -18,10 +17,10 @@ export function ImpactMetrics() {
         <section id="impact" className="py-24 bg-clinical-white relative">
             <div className="container mx-auto px-6">
                 <div className="text-center max-w-2xl mx-auto mb-16">
-                    <h2 className="text-teal font-mono text-sm font-bold uppercase tracking-widest mb-4">
+                    <h2 className="text-emerald font-mono text-sm font-bold uppercase tracking-widest mb-4">
                         Proven Results
                     </h2>
-                    <h3 className="text-4xl font-display font-bold text-navy">
+                    <h3 className="text-4xl font-display font-bold text-navy-dark">
                         Quantifying the ArogyaSync advantage.
                     </h3>
                 </div>
@@ -36,7 +35,15 @@ export function ImpactMetrics() {
     );
 }
 
-function MetricCard({ metric, index }: { metric: any; index: number }) {
+interface Metric {
+    label: string;
+    value: number;
+    prefix?: string;
+    suffix?: string;
+    sub: string;
+}
+
+function MetricCard({ metric, index }: { metric: Metric; index: number }) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
     const [count, setCount] = useState(0);
@@ -71,23 +78,23 @@ function MetricCard({ metric, index }: { metric: any; index: number }) {
             className="p-8 rounded-[32px] bg-clinical-white border border-soft-gray shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all group"
         >
             <div className="flex flex-col gap-1">
-                <span className="text-sm font-bold text-charcoal/40 uppercase tracking-widest">
+                <span className="text-sm font-bold text-navy-dark/40 uppercase tracking-widest">
                     {metric.label}
                 </span>
                 <div className="flex items-baseline gap-1">
                     {metric.prefix && (
-                        <span className="text-2xl font-display font-bold text-navy/40">
+                        <span className="text-2xl font-display font-bold text-navy-dark/40">
                             {metric.prefix}
                         </span>
                     )}
-                    <span className="text-5xl font-mono font-bold text-navy tracking-tighter">
+                    <span className="text-5xl font-mono font-bold text-navy-dark tracking-tighter">
                         {typeof metric.value === 'number' ? (metric.value % 1 === 0 ? count.toFixed(0) : count.toFixed(1)) : metric.value}
                     </span>
-                    <span className="text-2xl font-display font-bold text-teal">
+                    <span className="text-2xl font-display font-bold text-emerald">
                         {metric.suffix}
                     </span>
                 </div>
-                <p className="text-xs font-semibold text-charcoal/60 mt-2">
+                <p className="text-xs font-semibold text-navy-dark/60 mt-2">
                     {metric.sub}
                 </p>
             </div>
@@ -96,7 +103,7 @@ function MetricCard({ metric, index }: { metric: any; index: number }) {
                     initial={{ width: 0 }}
                     animate={isInView ? { width: "100%" } : {}}
                     transition={{ duration: 1.5, delay: 0.5 }}
-                    className="h-full bg-navy group-hover:bg-teal transition-colors"
+                    className="h-full bg-navy-dark group-hover:bg-emerald transition-colors"
                 />
             </div>
         </motion.div>

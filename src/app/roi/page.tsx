@@ -11,8 +11,8 @@ export default function ROIPage() {
             <Navbar />
             <div className="pt-32 pb-20 bg-white">
                 <div className="container mx-auto px-6">
-                    <h1 className="text-5xl md:text-7xl font-display font-bold text-navy mb-4">Impact Beyond the Bottom Line.</h1>
-                    <p className="text-xl text-charcoal/60 max-w-2xl leading-relaxed">We don't just save money; we create a foundation of trust and efficiency in clinical workflows.</p>
+                    <h1 className="text-5xl md:text-7xl font-display font-bold text-navy-dark mb-4">Impact Beyond the Bottom Line.</h1>
+                    <p className="text-xl text-navy-dark/60 max-w-2xl leading-relaxed">We don&apos;t just save money; we create a foundation of trust and efficiency in clinical workflows.</p>
                 </div>
             </div>
             <ROIComparisonTable />

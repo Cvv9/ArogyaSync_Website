@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Shield, Lock, FileCheck, Globe, CheckCircle2 } from "lucide-react";
+import { Shield, Lock, Globe, CheckCircle2 } from "lucide-react";
 
 const certifications = [
     { name: "ISO 13485", desc: "Medical Device Quality Management" },
@@ -17,13 +17,13 @@ export function TrustCompliance() {
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div>
-                        <h2 className="text-teal font-mono text-sm font-bold uppercase tracking-widest mb-4">
+                        <h2 className="text-emerald font-mono text-sm font-bold uppercase tracking-widest mb-4">
                             Trust & Compliance
                         </h2>
-                        <h3 className="text-4xl font-display font-bold text-navy mb-6">
+                        <h3 className="text-4xl font-display font-bold text-navy-dark mb-6">
                             Enterprise-grade reliability, clinically certified.
                         </h3>
-                        <p className="text-charcoal/70 text-lg mb-8">
+                        <p className="text-navy-dark/70 text-lg mb-8">
                             We adhere to the highest international standards for medical devices and data security, ensuring your patient data remains secure and your hospital stays compliant.
                         </p>
 
@@ -32,11 +32,11 @@ export function TrustCompliance() {
                                 "HIPAA Compliant Architecture",
                                 "End-to-end AES-256 Data Encryption",
                                 "Zero Leakage for Insurance Claims",
-                                "Clinically Validated (99.8% Accuracy)"
+                                "Clinically Validated (95% Accuracy)"
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-3">
-                                    <CheckCircle2 className="text-success w-5 h-5" />
-                                    <span className="text-sm font-bold text-navy/80">{item}</span>
+                                    <CheckCircle2 className="text-emerald w-5 h-5" />
+                                    <span className="text-sm font-bold text-navy-dark/80">{item}</span>
                                 </div>
                             ))}
                         </div>
@@ -47,19 +47,19 @@ export function TrustCompliance() {
                             <motion.div
                                 key={i}
                                 whileHover={{ y: -5 }}
-                                className="p-6 bg-clinical-white rounded-2xl border border-soft-gray shadow-sm flex flex-col items-center text-center"
+                                className="p-6 bg-white rounded-2xl border border-soft-gray shadow-sm flex flex-col items-center text-center"
                             >
-                                <div className="w-12 h-12 bg-navy/5 rounded-full flex items-center justify-center mb-4">
-                                    <Shield className="text-navy w-6 h-6" />
+                                <div className="w-12 h-12 bg-navy-dark/5 rounded-full flex items-center justify-center mb-4">
+                                    <Shield className="text-navy-dark w-6 h-6" />
                                 </div>
-                                <h4 className="text-sm font-bold text-navy mb-1">{cert.name}</h4>
-                                <p className="text-[10px] text-charcoal/40 font-medium uppercase tracking-wider">{cert.desc}</p>
+                                <h4 className="text-sm font-bold text-navy-dark mb-1">{cert.name}</h4>
+                                <p className="text-[10px] text-navy-dark/40 font-medium uppercase tracking-wider">{cert.desc}</p>
                             </motion.div>
                         ))}
 
-                        <div className="col-span-2 p-6 bg-navy rounded-2xl flex items-center justify-between text-clinical-white">
+                        <div className="col-span-2 p-6 bg-navy-dark rounded-2xl flex items-center justify-between text-white">
                             <div className="flex items-center gap-4">
-                                <Lock className="text-teal w-8 h-8" />
+                                <Lock className="text-emerald w-8 h-8" />
                                 <div>
                                     <h4 className="text-sm font-bold">Data Sovereignty</h4>
                                     <p className="text-[10px] opacity-60">Full control over where your data resides.</p>

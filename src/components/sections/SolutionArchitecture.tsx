@@ -2,8 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Cpu, Camera, Wifi, Layers, Info, X } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Cpu, Camera, Wifi, Layers, X } from "lucide-react";
 
 const hotspots = [
     {
@@ -48,24 +47,24 @@ export function SolutionArchitecture() {
     const [selectedHotspot, setSelectedHotspot] = useState<typeof hotspots[0] | null>(null);
 
     return (
-        <section id="solutions" className="py-24 bg-navy relative overflow-hidden">
+        <section id="solutions" className="py-24 bg-navy-dark relative overflow-hidden">
             <div className="container mx-auto px-6">
                 <div className="max-w-3xl mb-20">
-                    <h2 className="text-teal font-mono text-sm font-bold uppercase tracking-widest mb-4">
+                    <h2 className="text-emerald font-mono text-sm font-bold uppercase tracking-widest mb-4">
                         Solution Architecture
                     </h2>
                     <h3 className="text-4xl md:text-5xl font-display font-bold text-clinical-white mb-6">
                         Engineering clinical trust into every byte.
                     </h3>
                     <p className="text-soft-gray/60 text-lg">
-                        ArogyaSync isn't just a camera—it's a complete Edge AI ecosystem designed for the most demanding healthcare environments.
+                        ArogyaSync isn&apos;t just a camera—it&apos;s a complete Edge AI ecosystem designed for the most demanding healthcare environments.
                     </p>
                 </div>
 
-                <div className="relative aspect-video max-w-5xl mx-auto bg-charcoal/20 rounded-[40px] border border-soft-gray/10 overflow-hidden shadow-3xl">
+                <div className="relative aspect-video max-w-5xl mx-auto bg-navy-dark rounded-[40px] border border-soft-gray/10 overflow-hidden shadow-3xl">
                     {/* Background Visual (Simulating a device outline/glow) */}
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-[60%] h-[60%] bg-teal/5 rounded-full blur-[100px] animate-pulse" />
+                        <div className="w-[60%] h-[60%] bg-emerald/5 rounded-full blur-[100px] animate-pulse" />
                         <div className="relative w-full h-full flex items-center justify-center">
                             <div className="text-clinical-white/5 font-display font-black text-9xl uppercase select-none tracking-tighter">
                                 AROGYASYNC ONE
@@ -84,11 +83,11 @@ export function SolutionArchitecture() {
                             <motion.div
                                 animate={{ scale: [1, 1.2, 1] }}
                                 transition={{ duration: 2, repeat: Infinity }}
-                                className="w-8 h-8 bg-teal rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(16,183,127,0.5)] group-hover:bg-clinical-white transition-colors"
+                                className="w-8 h-8 bg-emerald rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(16,183,127,0.5)] group-hover:bg-clinical-white transition-colors"
                             >
-                                <div className="w-3 h-3 bg-navy rounded-full" />
+                                <div className="w-3 h-3 bg-navy-dark rounded-full" />
                             </motion.div>
-                            <div className="absolute top-10 left-1/2 -translate-x-1/2 whitespace-nowrap px-3 py-1 bg-charcoal/80 backdrop-blur-md rounded-lg text-[10px] font-bold text-clinical-white opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div className="absolute top-10 left-1/2 -translate-x-1/2 whitespace-nowrap px-3 py-1 bg-navy-dark/80 backdrop-blur-md rounded-lg text-[10px] font-bold text-clinical-white opacity-0 group-hover:opacity-100 transition-opacity">
                                 {spot.title}
                             </div>
                         </button>
@@ -105,22 +104,22 @@ export function SolutionArchitecture() {
                             >
                                 <button
                                     onClick={() => setSelectedHotspot(null)}
-                                    className="absolute top-4 right-4 text-charcoal/40 hover:text-navy transition-colors"
+                                    className="absolute top-4 right-4 text-navy-dark/40 hover:text-navy-dark transition-colors"
                                 >
                                     <X className="w-5 h-5" />
                                 </button>
-                                <div className="w-12 h-12 bg-navy rounded-2xl flex items-center justify-center mb-6">
-                                    <selectedHotspot.icon className="text-teal w-6 h-6" />
+                                <div className="w-12 h-12 bg-navy-dark rounded-2xl flex items-center justify-center mb-6">
+                                    <selectedHotspot.icon className="text-emerald w-6 h-6" />
                                 </div>
-                                <h4 className="text-xl font-display font-bold text-navy mb-3">
+                                <h4 className="text-xl font-display font-bold text-navy-dark mb-3">
                                     {selectedHotspot.title}
                                 </h4>
-                                <p className="text-charcoal/70 text-sm leading-relaxed mb-6">
+                                <p className="text-navy-dark/70 text-sm leading-relaxed mb-6">
                                     {selectedHotspot.content}
                                 </p>
                                 <div className="p-4 bg-soft-gray rounded-xl border border-soft-gray/50">
-                                    <span className="text-[10px] font-bold text-charcoal/40 uppercase tracking-widest block mb-2">Technical Specs</span>
-                                    <span className="text-xs font-mono font-medium text-navy">
+                                    <span className="text-[10px] font-bold text-navy-dark/40 uppercase tracking-widest block mb-2">Technical Specs</span>
+                                    <span className="text-xs font-mono font-medium text-navy-dark">
                                         {selectedHotspot.tech}
                                     </span>
                                 </div>
@@ -131,7 +130,7 @@ export function SolutionArchitecture() {
                     {/* Technical Flow Legend */}
                     <div className="absolute bottom-10 left-10 flex gap-8">
                         <div className="flex items-center gap-3">
-                            <div className="w-3 h-3 bg-teal rounded-full" />
+                            <div className="w-3 h-3 bg-emerald rounded-full" />
                             <span className="text-xs font-bold text-clinical-white/60">Edge AI Processing</span>
                         </div>
                         <div className="flex items-center gap-3">

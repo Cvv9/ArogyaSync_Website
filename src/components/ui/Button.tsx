@@ -3,7 +3,6 @@
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
@@ -12,15 +11,16 @@ const buttonVariants = cva(
         variants: {
             variant: {
                 primary:
-                    "bg-navy text-clinical-white shadow-lg shadow-navy/20 hover:bg-navy/90 hover:shadow-navy/40",
-                gradient:
-                    "bg-gradient-to-r from-navy to-[#1E3A8A] text-clinical-white shadow-lg shadow-navy/20 hover:shadow-navy/40 hover:opacity-90",
+                    "bg-emerald text-white shadow-lg shadow-emerald/20 hover:bg-emerald-light hover:shadow-emerald/40",
+                secondary:
+                    "bg-navy-dark text-white shadow-lg shadow-navy-dark/20 hover:bg-navy-mid hover:shadow-navy-dark/40",
                 teal:
-                    "bg-teal text-navy shadow-lg shadow-teal/20 hover:bg-teal/90 hover:shadow-teal/40",
+                    "bg-emerald text-white shadow-lg shadow-emerald/20 hover:bg-emerald-light hover:shadow-emerald/40",
                 outline:
-                    "border border-silver bg-transparent text-charcoal hover:bg-soft-gray hover:text-navy",
-                ghost: "bg-transparent text-charcoal hover:bg-soft-gray hover:text-navy",
-                link: "text-navy underline-offset-4 hover:underline",
+                    "border border-navy-mid bg-transparent text-navy-dark hover:bg-soft-gray hover:text-emerald",
+                ghost: "bg-transparent text-navy-dark hover:bg-soft-gray hover:text-emerald",
+                link: "text-emerald underline-offset-4 hover:underline",
+                gradient: "bg-gradient-to-r from-emerald to-emerald-light text-white shadow-lg shadow-emerald/20 hover:shadow-emerald/40",
             },
             size: {
                 default: "h-11 px-6 py-2",

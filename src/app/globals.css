@@ -1,33 +1,44 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy: #0A2463;
-  --color-teal: #10B77F; /* Synced with App Design */
+  --color-navy-dark: #111827;
+  --color-navy-mid: #1A202C;
+  --color-emerald: #00C48C;
+  --color-emerald-light: #10B981;
   --color-clinical-white: #FFFFFF;
-  --color-soft-gray: #F5F7FA;
-  --color-success: #10B77F;
-  --color-alert: #FFB020;
-  --color-charcoal: #1A1D29;
-  --color-silver: #C0C5CE;
+  --color-soft-gray: #F9FAFB;
 
-  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Roboto Mono, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-sans: "Inter", "Roboto", "SF Pro Display", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", "Roboto", "SF Pro Display", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
   --background: var(--color-clinical-white);
-  --foreground: var(--color-charcoal);
-  --primary: var(--color-navy);
-  --accent: var(--color-teal);
+  --foreground: var(--color-navy-dark);
+  --primary: var(--color-emerald);
+  --secondary: var(--color-navy-mid);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #050b1a;
-    /* Even deeper navy for background */
-    --foreground: var(--color-soft-gray);
-  }
+.dark-card {
+  background-color: var(--color-navy-dark);
+  color: var(--color-clinical-white);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+.btn-primary {
+  background-color: var(--color-emerald);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-emerald-light);
+  transform: translateY(-2px);
 }
 
 body {

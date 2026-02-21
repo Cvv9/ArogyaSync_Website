@@ -41,6 +41,7 @@ export function Footer() {
                         <ul className="space-y-4 text-soft-gray/60">
                             <li><Link href="/" className="hover:text-emerald transition-colors">Home</Link></li>
                             <li><Link href="/product" className="hover:text-emerald transition-colors">Product & Technology</Link></li>
+                            <li><Link href="/gallery" className="hover:text-emerald transition-colors">Ecosystem View</Link></li>
                             <li><Link href="/roi" className="hover:text-emerald transition-colors">ROI & Impact</Link></li>
                             <li><Link href="/about" className="hover:text-emerald transition-colors">About Us</Link></li>
                             <li><Link href="/contact" className="hover:text-emerald transition-colors">Pricing</Link></li>

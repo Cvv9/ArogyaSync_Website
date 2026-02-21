@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
     { name: "Product & Tech", href: "/product" },
+    { name: "Ecosystem View", href: "/gallery" },
     { name: "ROI & Impact", href: "/roi" },
     { name: "About Us", href: "/about" },
     { name: "Pricing", href: "/contact" },

@@ -2,10 +2,10 @@
 
 @theme {
   --color-navy: #0A2463;
-  --color-teal: #00D9FF;
+  --color-teal: #10B77F; /* Synced with App Design */
   --color-clinical-white: #FFFFFF;
   --color-soft-gray: #F5F7FA;
-  --color-success: #00C48C;
+  --color-success: #10B77F;
   --color-alert: #FFB020;
   --color-charcoal: #1A1D29;
   --color-silver: #C0C5CE;

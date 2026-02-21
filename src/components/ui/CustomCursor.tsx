@@ -40,7 +40,7 @@ export function CustomCursor() {
                 x: cursorX,
                 y: cursorY,
                 scale: isHovering ? 2.5 : 1,
-                backgroundColor: isHovering ? "rgba(0, 217, 255, 0.1)" : "transparent",
+                backgroundColor: isHovering ? "rgba(16, 183, 127, 0.1)" : "transparent",
             }}
             transition={{ type: "spring", stiffness: 250, damping: 20 }}
         >

@@ -71,7 +71,7 @@ export function OCRShowcase() {
                                         initial={{ top: "0%" }}
                                         animate={{ top: "100%" }}
                                         transition={{ duration: vitals.length * 0.8, ease: "linear" }}
-                                        className="absolute left-0 right-0 h-1 bg-gradient-to-r from-transparent via-teal to-transparent z-20 shadow-[0_0_20px_rgba(0,217,255,0.8)]"
+                                        className="absolute left-0 right-0 h-1 bg-gradient-to-r from-transparent via-teal to-transparent z-20 shadow-[0_0_20px_rgba(16,183,127,0.8)]"
                                     />
                                 )}
                             </AnimatePresence>

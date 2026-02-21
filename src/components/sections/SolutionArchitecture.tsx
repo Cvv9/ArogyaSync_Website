@@ -84,7 +84,7 @@ export function SolutionArchitecture() {
                             <motion.div
                                 animate={{ scale: [1, 1.2, 1] }}
                                 transition={{ duration: 2, repeat: Infinity }}
-                                className="w-8 h-8 bg-teal rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,217,255,0.5)] group-hover:bg-clinical-white transition-colors"
+                                className="w-8 h-8 bg-teal rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(16,183,127,0.5)] group-hover:bg-clinical-white transition-colors"
                             >
                                 <div className="w-3 h-3 bg-navy rounded-full" />
                             </motion.div>

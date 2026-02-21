@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 
 export function FooterCTA() {
     return (
-        <footer className="relative bg-navy py-24 overflow-hidden">
+        <section className="relative bg-navy py-24 overflow-hidden border-t border-white/5">
             {/* Decorative Background */}
             <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
                 <div className="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-teal rounded-full blur-[200px]" />
@@ -47,24 +47,8 @@ export function FooterCTA() {
                             <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
                         </Button>
                     </div>
-
-                    <div className="pt-20 border-t border-soft-gray/10 flex flex-col md:flex-row justify-between items-center gap-8">
-                        <div className="flex flex-col items-start gap-4">
-                            <div className="flex items-center gap-2">
-                                <div className="w-8 h-8 bg-teal rounded-lg" />
-                                <span className="text-xl font-display font-bold text-clinical-white">Arogya<span className="text-teal">Sync</span></span>
-                            </div>
-                            <p className="text-xs text-soft-gray/40 font-medium">© 2026 ArogyaSync. Patent Pending Technology. Made with precision in Patna & Utah.</p>
-                        </div>
-
-                        <div className="flex gap-8 text-xs font-bold text-soft-gray/60 uppercase tracking-widest">
-                            <a href="#" className="hover:text-teal transition-colors">Privacy Policy</a>
-                            <a href="#" className="hover:text-teal transition-colors">Terms of Service</a>
-                            <a href="#" className="hover:text-teal transition-colors">Compliance</a>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </footer>
+        </section>
     );
 }

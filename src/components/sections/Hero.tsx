@@ -2,14 +2,14 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Play, Users, Award, ShieldCheck, Activity } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 const stats = [
-    { icon: Award, text: "IIT Patna Incubated" },
-    { icon: ShieldCheck, text: "₹5L Grant Recipient" },
-    { icon: Users, text: "500+ Devices Deployed" },
+    { icon: Award, text: "Incubated & Backed By IIT Patna" },
+    { icon: ShieldCheck, text: "Awarded equity-free grant of ₹5L" },
 ];
 
 export function Hero() {
@@ -33,8 +33,8 @@ export function Hero() {
                             The Future of Healthcare Retrofitting
                         </span>
                         <h1 className="text-5xl md:text-6xl xl:text-7xl font-display font-bold text-navy leading-[1.1]">
-                            Transform Legacy Monitors Into{" "}
-                            <span className="text-teal">Smart Systems</span>
+                            Empowering Healthcare with{" "}
+                            <span className="text-teal">Real-Time Monitoring</span>
                         </h1>
                     </motion.div>
 
@@ -44,25 +44,8 @@ export function Hero() {
                         transition={{ duration: 0.6, delay: 0.1 }}
                         className="text-lg md:text-xl text-charcoal/70 max-w-xl leading-relaxed"
                     >
-                        AI-powered retrofit solution delivering 85% cost savings with 99.8%
-                        OCR accuracy. Retrofit legacy hospital monitors into smart,
-                        connected systems in minutes.
+                        Transform your existing hospital monitors into smart, connected systems with our AI-powered plug-and-play retrofit device. Bridging the gap between analog infrastructure and digital healthcare.
                     </motion.p>
-
-                    {/* Interactive Metric Counter Placeholder */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                        className="bg-navy/5 border border-navy/10 rounded-2xl p-6 inline-flex flex-col gap-1"
-                    >
-                        <span className="text-3xl font-mono font-bold text-navy">
-                            ₹28.5L+
-                        </span>
-                        <span className="text-sm text-charcoal/60 font-medium">
-                            Average Savings per 10 Beds
-                        </span>
-                    </motion.div>
 
                     {/* CTAs */}
                     <motion.div
@@ -72,13 +55,14 @@ export function Hero() {
                         className="flex flex-wrap gap-4"
                     >
                         <Button variant="gradient" size="lg" className="group">
-                            Schedule Live Demo
+                            Schedule a Demo
                             <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                         </Button>
-                        <Button variant="outline" size="lg" className="group">
-                            <Play className="mr-2 w-5 h-5 fill-navy group-hover:fill-teal transition-colors" />
-                            Watch 2-Min Demo
-                        </Button>
+                        <Link href="/product">
+                            <Button variant="outline" size="lg" className="group">
+                                Explore the Tech
+                            </Button>
+                        </Link>
                     </motion.div>
 
                     {/* Trust Bar */}

@@ -8,10 +8,10 @@ import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-    { name: "OCR Technology", href: "#ocr" },
-    { name: "Solutions", href: "#solutions" },
-    { name: "Impact", href: "#impact" },
-    { name: "Team", href: "#team" },
+    { name: "Product & Tech", href: "/product" },
+    { name: "ROI & Impact", href: "/roi" },
+    { name: "About Us", href: "/about" },
+    { name: "Pricing", href: "/contact" },
 ];
 
 export function Navbar() {

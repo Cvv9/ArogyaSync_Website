@@ -29,10 +29,10 @@ export function TrustCompliance() {
 
                         <div className="space-y-4">
                             {[
-                                "End-to-end AES-256 data encryption",
-                                "Local network data processing (Edge AI)",
-                                "DPDP Act & HIPAA compliant architecture",
-                                "Regular clinical validation audits"
+                                "HIPAA Compliant Architecture",
+                                "End-to-end AES-256 Data Encryption",
+                                "Zero Leakage for Insurance Claims",
+                                "Clinically Validated (99.8% Accuracy)"
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-3">
                                     <CheckCircle2 className="text-success w-5 h-5" />

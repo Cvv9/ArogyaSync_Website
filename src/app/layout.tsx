@@ -33,6 +33,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${dmSans.variable} ${jetbrainsMono.variable} font-body antialiased`}
+        suppressHydrationWarning
       >
         <CustomCursor />
         {children}

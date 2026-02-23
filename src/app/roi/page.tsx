@@ -1,9 +1,16 @@
+import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ROIComparisonTable } from "@/components/sections/ROIComparisonTable";
 import { FraudPrevention } from "@/components/sections/FraudPrevention";
 import { ROICalculator } from "@/components/sections/ROICalculator";
 import { FooterCTA } from "@/components/sections/FooterCTA";
+
+export const metadata: Metadata = {
+    title: "ROI and Impact | ArogyaSync",
+    description:
+        "Quantify healthcare ROI with ArogyaSync through fraud prevention, lower infrastructure cost, and measurable workflow efficiency gains.",
+};
 
 export default function ROIPage() {
     return (

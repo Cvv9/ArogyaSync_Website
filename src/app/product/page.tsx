@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { HowItWorksSteps } from "@/components/sections/HowItWorksSteps";
@@ -8,6 +9,12 @@ import { CompetitiveAdvantage } from "@/components/sections/CompetitiveAdvantage
 import { FooterCTA } from "@/components/sections/FooterCTA";
 
 import { OfflineMode } from "@/components/sections/OfflineMode";
+
+export const metadata: Metadata = {
+    title: "Product and Technology | ArogyaSync",
+    description:
+        "See the ArogyaSync technology stack, from OCR capture and offline sync to secure architecture and blockchain verification.",
+};
 
 export default function ProductPage() {
     return (

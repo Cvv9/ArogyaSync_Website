@@ -1,9 +1,16 @@
+import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { HardwareShowcase } from "@/components/sections/HardwareShowcase";
 import { SoftwareWalkthrough } from "@/components/sections/SoftwareWalkthrough";
 import { MobileAppGallery } from "@/components/sections/MobileAppGallery";
 import { FooterCTA } from "@/components/sections/FooterCTA";
+
+export const metadata: Metadata = {
+    title: "Gallery | ArogyaSync Ecosystem",
+    description:
+        "Explore ArogyaSync hardware, software, and mobile interfaces powering connected, AI-assisted monitoring workflows.",
+};
 
 export default function GalleryPage() {
     return (

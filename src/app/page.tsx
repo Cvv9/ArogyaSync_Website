@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { ProblemCards } from "@/components/sections/ProblemCards";
@@ -7,6 +8,12 @@ import { SuccessCarousel } from "@/components/sections/SuccessCarousel";
 import { TrustCompliance } from "@/components/sections/TrustCompliance";
 import { FooterCTA } from "@/components/sections/FooterCTA";
 import { Footer } from "@/components/layout/Footer";
+
+export const metadata: Metadata = {
+  title: "ArogyaSync | Smart Hospital Monitoring Platform",
+  description:
+    "Retrofit legacy monitors with AI-powered OCR, real-time dashboards, and blockchain-backed audit trails for connected clinical monitoring.",
+};
 
 export default function Home() {
   return (

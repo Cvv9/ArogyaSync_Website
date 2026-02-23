@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { PricingAndContact } from "@/components/sections/PricingAndContact";
 import { FooterCTA } from "@/components/sections/FooterCTA";
+
+export const metadata: Metadata = {
+    title: "Pricing and Contact | ArogyaSync",
+    description:
+        "Explore transparent ArogyaSync pricing plans and connect with our team to deploy connected healthcare monitoring in your facility.",
+};
 
 export default function ContactPage() {
     return (

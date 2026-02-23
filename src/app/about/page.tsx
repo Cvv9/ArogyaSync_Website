@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { TeamSection } from "@/components/sections/TeamSection";
 import { FooterCTA } from "@/components/sections/FooterCTA";
+
+export const metadata: Metadata = {
+    title: "About ArogyaSync | Mission and Team",
+    description:
+        "Learn how ArogyaSync is democratizing high-precision healthcare monitoring through AI retrofit technology and clinical innovation.",
+};
 
 export default function AboutPage() {
     return (

@@ -4,24 +4,25 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+// Images served from public/images/mobile/ — host internally (S3/CDN) for production
 const screenshots = [
     {
-        url: "https://www.genspark.ai/api/files/s/mbkhrRLa",
+        url: "/images/mobile/dashboard.png",
         title: "Dashboard View",
         desc: "Real-time vitals monitoring and historical trends."
     },
     {
-        url: "https://www.genspark.ai/api/files/s/EdGez3Gs",
+        url: "/images/mobile/account-creation.png",
         title: "Account Creation",
         desc: "Secure, role-based access for medical professionals."
     },
     {
-        url: "https://www.genspark.ai/api/files/s/y09LY5Ae",
+        url: "/images/mobile/device-scanning.png",
         title: "Device Scanning",
         desc: "Seamless BLE pairing and edge device configuration."
     },
     {
-        url: "https://www.genspark.ai/api/files/s/BnXWhep5",
+        url: "/images/mobile/patient-registration.png",
         title: "Patient Registration",
         desc: "Digital onboarding for new patient monitoring sessions."
     }

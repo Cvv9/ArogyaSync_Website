@@ -4,6 +4,7 @@ import ContactPage from "@/app/contact/page";
 import HomePage from "@/app/page";
 import ProductPage from "@/app/product/page";
 import ROIPage from "@/app/roi/page";
+import GalleryPage from "@/app/gallery/page";
 
 jest.mock("@/components/layout/Navbar", () => ({
   Navbar: () => <div data-testid="navbar">Navbar</div>,
@@ -85,6 +86,18 @@ jest.mock("@/components/sections/FraudPrevention", () => ({
   FraudPrevention: () => <section data-testid="fraud-prevention">Fraud Prevention</section>,
 }));
 
+jest.mock("@/components/sections/HardwareShowcase", () => ({
+  HardwareShowcase: () => <section data-testid="hardware-showcase">Hardware Showcase</section>,
+}));
+
+jest.mock("@/components/sections/SoftwareWalkthrough", () => ({
+  SoftwareWalkthrough: () => <section data-testid="software-walkthrough">Software Walkthrough</section>,
+}));
+
+jest.mock("@/components/sections/MobileAppGallery", () => ({
+  MobileAppGallery: () => <section data-testid="mobile-app-gallery">Mobile App Gallery</section>,
+}));
+
 describe("Website pages", () => {
   it("renders home page core sections", () => {
     render(<HomePage />);
@@ -118,5 +131,28 @@ describe("Website pages", () => {
     expect(screen.getByRole("heading", { name: /impact beyond the bottom line/i })).toBeInTheDocument();
     expect(screen.getByTestId("roi-calculator")).toBeInTheDocument();
     expect(screen.getByTestId("fraud-prevention")).toBeInTheDocument();
+  });
+
+  it("renders gallery page with ecosystem heading", () => {
+    render(<GalleryPage />);
+    expect(screen.getByRole("heading", { name: /ecosystem in action/i })).toBeInTheDocument();
+    expect(screen.getByTestId("hardware-showcase")).toBeInTheDocument();
+    expect(screen.getByTestId("software-walkthrough")).toBeInTheDocument();
+    expect(screen.getByTestId("mobile-app-gallery")).toBeInTheDocument();
+  });
+
+  it("renders gallery page with navbar and footer", () => {
+    render(<GalleryPage />);
+    expect(screen.getByTestId("navbar")).toBeInTheDocument();
+    expect(screen.getByTestId("footer-cta")).toBeInTheDocument();
+  });
+
+  it("renders all pages with consistent navbar presence", () => {
+    const pages = [HomePage, AboutPage, ContactPage, ProductPage, ROIPage, GalleryPage];
+    for (const Page of pages) {
+      const { unmount } = render(<Page />);
+      expect(screen.getByTestId("navbar")).toBeInTheDocument();
+      unmount();
+    }
   });
 });

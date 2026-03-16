@@ -44,3 +44,6 @@ env/
 *.tsbuildinfo
 next-env.d.ts
 .DS_Store
+
+# Claude Code
+.claude/
